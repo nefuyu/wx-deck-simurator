@@ -1,6 +1,6 @@
 <template>
-  <ul class="">
-    <li v-for="tab in tabs" :key="tab.id" :class="{select: currentTab === tab.id}" class=""
+  <ul class="tabs">
+    <li v-for="tab in tabs" :key="tab.id" :class="{select: currentTab === tab.id}" class="tab"
       @click="selected(tab.id)">
       {{ tab.title }}
     </li>
@@ -25,8 +25,8 @@ export default {
       mainCards: [],
       currentTab: 1,
       tabs: [
-        {id: 1, title: "edit"},
-        {id: 2, title: "view"}
+        {id: 1, title: "Edit"},
+        {id: 2, title: "View"}
       ],
     }
   },
@@ -46,5 +46,27 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.tabs {
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  display: inline-block;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.tab.select {
+  background-color: aquamarine;
 }
 </style>

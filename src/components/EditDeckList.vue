@@ -79,8 +79,15 @@ export default {
     height: auto;
 }
 
+ul {
+    width: 1200px;
+    text-align: left;
+    margin: auto;
+    min-height: 200px;
+}
+
 li {
-    display: table-cell;
+    display: inline-block;
 }
 
 .cardLayout .countLayout div {
@@ -90,13 +97,19 @@ li {
 
 .cardLayout .countLayout div.changeCount {
     width: 20px;
+    cursor: pointer;
 }
 
 .cardLayout .countLayout div.count {
     width: 80px;
 }
 
+.lifeburst {
+    text-align: center;
+}
+
 .lifeburst img {
+    cursor: pointer;
     opacity: 0.1;
 }
 

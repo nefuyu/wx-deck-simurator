@@ -18,7 +18,7 @@
         </li>
       </ul>
     </div>
-    <div id="viewMainDeckLayout" :style="{ '--viewMainDeckWidthCount': adjustMainDeckWidth()}">
+    <div id="viewMainDeckLayout" :style="{ '--viewMainDeckWidthCount': adjustMainDeckWidth() }">
       <span>メインデッキ</span>
       <ul id="viewMainDeck">
         <li v-for="card in mainCards" :key="card">
@@ -47,7 +47,7 @@ export default {
     },
     methods: {
       adjustMainDeckWidth() {
-        return Math.max((this.mainCards.length + 2) / 3 | 4);
+        return Math.max((this.mainCards.length + 2) / 3, 4);
       }
     }
 }
@@ -71,6 +71,12 @@ ul {
     height: auto;
 }
 
+#viewLrigDeck,
+#viewMainDeck {
+    text-align: left;
+    padding-left: calc(var(--viewImageShift) * 7);
+}
+
 #viewLrigDeck li,
 #viewMainDeck li {
     display: inline-block;
@@ -80,6 +86,7 @@ ul {
 #viewDeck #viewMainDeckLayout {
     display: inline-block;
     position: relative;
+    vertical-align: top;
 }
 
 #viewDeck #viewLrigDeckLayout {
@@ -105,6 +112,7 @@ ul {
 #viewDeck .cardLayout .countLayout div.count {
     width: var(--viewImageWidth);
     font-size: var(--viewImageCountFontSize);
+    text-align: center;
 }
 
 #viewDeck .cardLayout .imageLayout .cardImage {

@@ -7,7 +7,7 @@
   <div id="deckArea">
     <span>ルリグデッキ</span> <span>{{ countLrigCards() }}枚</span>
     <EditDeckList :cards="lrigCards" :showLB="false"/>
-    <span>メインデッキ</span> <span>{{ countMainCards() }}枚</span>
+    <span>メインデッキ</span> <span>{{ countMainCards() }}枚</span>&nbsp;
     <span>ライフバーストあり {{ countLB() }}枚</span> <span>ライフバーストなし {{ countNotLB() }}枚</span>
     <EditDeckList :cards="mainCards" :showLB="true"/>
   </div>
